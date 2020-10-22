@@ -61,11 +61,8 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '30ch',
+      width: '20ch',
       },
-    },
   },
 }));
 
@@ -84,13 +81,19 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton> */}
-          <Link to = '/homepage' className={classes.title}><Typography variant="h6" noWrap>
+          <Link to = '/' className={classes.title}><Typography variant="h6" noWrap>
             APOLLO
           </Typography></Link>
-          <div style = {{marginRight: '20%'}}>
-            <Button style = {{fontSize: 16, fontWeight: '600'}}>Women</Button>&nbsp;
-            <Button style = {{fontSize: 16, fontWeight: '600'}}>Men</Button>&nbsp;
-            <Button style = {{fontSize: 16, fontWeight: '600'}}>Kids</Button>
+          <div style = {{marginRight: '18%'}}>
+            <Link to = '/women'
+            style = {{textDecoration: 'none'}}>
+              <Button style = {{fontSize: 16, fontWeight: '600'}}>Women</Button>&nbsp;</Link>
+            <Link to = '/men'
+            style = {{textDecoration: 'none'}}>
+              <Button style = {{fontSize: 16, fontWeight: '600'}}>Men</Button>&nbsp;</Link>
+            <Link to = '/kids' 
+            style = {{textDecoration: 'none'}}>
+              <Button style = {{fontSize: 16, fontWeight: '600'}}>Kids</Button></Link>
           </div>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -105,21 +108,23 @@ export default function Navbar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>&nbsp;&nbsp;
-          <IconButton
-            edge="end"
-            color="inherit"
-            // aria-label="open drawer"
-          ><AccountCircle style = {{color: 'black'}}/></IconButton>
           {/* <IconButton
             edge="end"
             color="inherit"
             // aria-label="open drawer"
           ><Book style = {{color: 'black'}}/></IconButton> */}
+          <Link to = '/cart'>
           <IconButton
             edge="end"
             color="inherit"
             // aria-label="open drawer"
-          ><ShoppingCart style = {{color: 'black'}}/></IconButton>
+          ><ShoppingCart style = {{color: 'black'}}/></IconButton></Link>
+          <Link to = '/cart'>
+          <IconButton
+            edge="end"
+            color="inherit"
+            // aria-label="open drawer"
+          ><AccountCircle style = {{color: 'black'}}/></IconButton></Link>
         </Toolbar>
       </AppBar>
       </div>

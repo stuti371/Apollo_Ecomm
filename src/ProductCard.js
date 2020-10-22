@@ -42,7 +42,7 @@ export default function ProductCard() {
       {/* <IconButton aria-label="add to wishlist" style = {{marginLeft: '30%', color: '#150e38'}}>
           <Book />
         </IconButton> */}
-        <IconButton aria-label="add to cart" style = {{color: '#150e38'}}>
+        <IconButton aria-label="add to cart" style = {{color: '#150e38', marginLeft: '40%'}}>
           <ShoppingCart/>
         </IconButton>
        {/* </CardActions>  */}
