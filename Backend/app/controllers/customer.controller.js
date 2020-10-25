@@ -11,7 +11,10 @@ exports.create = (req, res) => {
       customeremail: req.body.customeremail,
       customername: req.body.customername,
       active: req.body.active,
-      customerpassword: req.body.customerpassword
+      customerpassword: req.body.customerpassword,
+      customeraddress: req.body.customeraddress,
+      productid: req.body.productid,
+      categoryid: req.body.categoryid
     });
   
     Customer.create(customer, (err, data) => {
